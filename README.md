@@ -147,13 +147,11 @@ Copy required `.dll` files into:
 This repo uses ONNX Runtime GPU with TensorRT Execution Provider.
 The typical provider priority is:
 
-TensorRT EP
+- TensorRT EP
+- CUDA EP
+- CPU EP
 
-CUDA EP
-
-CPU EP
-
-If TensorRT EP fails to load, it will fallback to CUDA or CPU.
+> If TensorRT EP fails to load, it will fallback to CUDA or CPU.
 
 ## 8. Troubleshooting
 8.1 TensorRT INT64 warning
