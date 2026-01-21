@@ -1,9 +1,9 @@
-# RF-DETR TensorRT Inference (Windows / Visual Studio)
+# RF-DETR TensorRT-EP Inference (Windows / Visual Studio)
 
-A Windows (Visual Studio) C++ implementation for **RF-DETR** inference accelerated by **TensorRT** (via ONNX / ONNX Runtime TensorRT EP).  
+A Windows (Visual Studio) C++ implementation for **RF-DETR** inference accelerated by **TensorRT-EP** (via ONNX / ONNX Runtime TensorRT EP).  
 Tested on **RTX 4070 Ti Super** with `rf-detr-base`, improving inference latency from **9–13 ms** to **2–5 ms**.
 
-> ✅ No CMake required (Visual Studio project solution).  
+> ✅ Visual Studio project solution.  
 > ✅ C++17 + CUDA + cuDNN + OpenCV + ONNX Runtime GPU + TensorRT.
 
 ---
