@@ -49,10 +49,10 @@ void Detector(DETR*& p) {
 
 
             }
-            //std::cout << "Press any key to exit" << std::endl;
-            //cv::imshow("Result of Detection", img);
-            //cv::waitKey(0);
-            //cv::destroyAllWindows();
+            std::cout << "Press any key to exit" << std::endl;
+            cv::imshow("Result of Detection", img);
+            cv::waitKey(0);
+            cv::destroyAllWindows();
         }
     }
 }
@@ -114,7 +114,7 @@ void DetectTest()
     params.modelPath = "./models/rfdetr.onnx";
     params.imgSize = { 560, 560 };
 #ifdef USE_CUDA
-    params.cudaEnable = false; 
+    params.cudaEnable = true; 
     params.trtEnable = !params.cudaEnable;
 
 #else
