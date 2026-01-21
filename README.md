@@ -142,4 +142,49 @@ Copy required `.dll` files into:
 > If you see errors like missing `cudnn*.dll`, `zlibwapi.dll`, `nvinfer*.dll`,
 > it means DLL search path is not set correctly.
 
+## 7. ONNX Runtime TensorRT EP Notes
 
+This repo uses ONNX Runtime GPU with TensorRT Execution Provider.
+The typical provider priority is:
+
+TensorRT EP
+
+CUDA EP
+
+CPU EP
+
+If TensorRT EP fails to load, it will fallback to CUDA or CPU.
+
+## 8. Troubleshooting
+8.1 TensorRT INT64 warning
+
+If you see warnings about INT64 weights, TensorRT will cast to INT32.
+You can re-export ONNX with proper dtypes or run simplification.
+
+8.2 cuDNN version mismatch
+
+Example:
+
+TensorRT was linked against cuDNN X but loaded cuDNN Y
+
+Fix:
+
+Ensure the cuDNN DLL in PATH matches the version TensorRT expects.
+
+8.3 OpenCV parallel plugin missing
+
+If you see missing opencv_core_parallel_*.dll messages:
+
+Ensure OpenCV bin is in PATH
+
+Or use opencv_world static/monolithic build configuration consistently
+
+9. Acknowledgements
+
+[RF-DETR](https://rfdetr.roboflow.com/)
+
+[ONNX Runtime](https://onnxruntime.ai/docs/get-started)
+
+[NVIDIA TensorRT](https://developer.nvidia.com/tensorrt)
+
+[OpenCV](https://opencv.org/)
