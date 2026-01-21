@@ -181,6 +181,8 @@ Or use opencv_world static/monolithic build configuration consistently
 
 - [RF-DETR](https://rfdetr.roboflow.com/)
 
+- [Ultralytics](https://docs.ultralytics.com/)
+
 - [ONNX Runtime](https://onnxruntime.ai/docs/get-started)
 
 - [NVIDIA TensorRT](https://developer.nvidia.com/tensorrt)
