@@ -1,3 +1,5 @@
+
+
 # RF-DETR TensorRT-EP Inference (Windows / Visual Studio)
 
 A Windows (Visual Studio) C++ implementation for **RF-DETR** inference accelerated by **TensorRT-EP** (via ONNX / ONNX Runtime TensorRT EP).  
@@ -137,7 +139,7 @@ Add these directories into Windows `PATH`:
 - cuDNN `bin`
 
 ### Option B: Copy DLLs next to exe (recommended)
-Copy required `.dll` files into:
+Copy required `.dll` files into the folder containing the executable:
 
 > If you see errors like missing `cudnn*.dll`, `zlibwapi.dll`, `nvinfer*.dll`,
 > it means DLL search path is not set correctly.
